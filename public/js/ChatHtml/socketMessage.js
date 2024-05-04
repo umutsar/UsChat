@@ -62,7 +62,6 @@ socket.on("message", (data) => {
          }
       }
 
-      
 
       // Sadece fotoğraf varsa
       else if (!data["message"] && data["photoPath"]) {

@@ -1,0 +1,429 @@
+.fixedMessage {
+    overflow-wrap: break-word;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+    html {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        height: 90vh;
+        font-family: Arial, sans-serif;
+        background-color: beige;
+    }
+
+    h2 {
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
+    }
+
+    #kapsayici {
+        margin: 0;
+        padding: 0;
+    }
+
+    #messages {
+        margin: auto;
+        border-radius: 8px;
+        border: 2px solid #ccc;
+        padding: 10px;
+        width: 90vw;
+        max-height: 74vh;
+        overflow: auto;
+    }
+
+    #pseudoDiv {
+        padding: 18px 12px;
+        margin-bottom: 2px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="submit"] {
+        margin-bottom: 10px;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    #messageHeader {
+        display: flex;
+        text-align: center;
+        width: 100vw;
+        background-color: beige;
+        display: inline-block;
+        margin: 1vh 0;
+    }
+
+    .dateDiv {
+        text-align: center;
+        margin: 8px 0;
+        color: #0D9276;
+    }
+
+    .message {
+        display: flex;
+        position: relative;
+        /* saat bilgisi için koydum */
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+
+        padding: 6px;
+        border-radius: 8px;
+        border: 1px solid grey;
+        margin-bottom: 2px;
+    }
+
+    .altAlta {
+        flex-direction: column;
+    }
+
+    .userOfMessage {
+        display: inline-block;
+        width: 100%;
+        vertical-align: middle;
+        color: red;
+    }
+
+    .onlyMessage {
+        display: flex;
+        justify-content: space-between;
+        width: 86vw;
+    }
+
+
+    .onlyMessage span {
+        display: flex;
+        padding: .4%;
+        word-break: break-word; /* Uzun kelimeleri (örneğin linkleri) kır */
+    }
+
+    .mesajinSagTarafi {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .timeInformation {
+        font-size: 2.8vw;
+        min-width: 7vw;
+    }
+
+    .silButonlariResmi {
+        min-width: 22px;
+        min-height: 22px;
+        width: 22px;
+        height: 22px;
+        border: none;
+        background-image: url("../images/delete.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .deneme {
+        width: 16px;
+        height: 16px;
+        border: none;
+        background-image: url("../images/delete.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    #inputs {
+        display: flex;
+        margin-left: auto;
+        width: 90vw;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 2vh;
+    }
+
+
+    #messageInput {
+        padding: 12px;
+        padding-left: 36px;
+        flex: 12;
+        margin: 0;
+        margin-right: 10px;
+        position: relative;
+        border-radius: 4px;
+        border: 1px solid rgb(82, 82, 82);
+    }
+
+
+
+
+
+
+    #plusIconParent {
+        height: 39px;
+        width: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        color: grey;
+        position: absolute;
+        border: 1px solid rgb(82, 82, 82);
+        border-right: 1px solid rgb(82, 82, 82);
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+    }
+
+
+    #dropdownMenu {
+        position: absolute;
+        top: 160%;
+        left: 2.5vw;
+        display: none;
+        width: 40vw;
+        list-style: none;
+        transform: translate(-10%, -160%);
+        padding: 0;
+        margin: 0;
+        background: linear-gradient(to bottom, #f79090f9, beige);
+        /* Renk geçişi */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+        border: 1px solid #555;
+        /* Kenarlık rengi */
+        border-radius: 10px;
+        padding: .4vh .6vw;
+    }
+
+    #dropdownMenu li {
+        color: beige;
+        /* Metin rengi */
+        padding: .5vh 1vw;
+        margin: 1vh 1vw;
+        border-radius: 8px;
+        background: linear-gradient(to right, #8BACAA, #8BACAA);
+        /* Renk geçişi */
+        transition: background 0.3s, color 0.3s;
+        /* Geçiş efekti */
+    }
+
+    #dropdownMenu li:hover {
+        background: linear-gradient(to right, #69a4a0, #69a4a0);
+        /* Hover için renk geçişi */
+        color: #fff;
+        /* Hover metin rengi */
+    }
+
+
+
+    #fileInputLabel {
+        cursor: pointer;
+    }
+
+    .rotated {
+        animation: rotateAnimation .5s forwards;
+    }
+
+    .rotatedReverse {
+        animation: rotateAnimationReverse .35s forwards;
+    }
+
+
+
+
+
+    #mesajGonderButonu {
+        flex: 1;
+        background-color: #4caf50;
+        color: white;
+        padding: 0px 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    #mesajGonderButonu:hover {
+        background-color: #45a049;
+    }
+
+
+    #yok {
+        float: right;
+        margin: 0;
+        padding: 0;
+        height: 4vh;
+    }
+
+    #cikisYapButonu {
+        margin: .6vh;
+        border-radius: 8px;
+        padding: 6px;
+        background-color: rgb(255, 109, 109);
+    }
+
+
+
+    .labels {
+        display: inline-block;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    #imagePreviewParent {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 43px;
+    }
+
+    #imagePreview {
+        position: relative;
+        border: 1px solid black;
+        border-radius: 6px;
+    }
+
+    #removeButton {
+        position: absolute;
+        right: 6px;
+        top: 6px;
+    }
+
+
+
+    .imageURLs {
+        width: 300px;
+        margin: auto;
+        height: auto;
+        text-align: center;
+        border-radius: 6px;
+    }
+
+    .imageURLsOnly {
+        width: 86vw;
+        height: auto;
+        border-radius: 6px;
+        margin: auto;
+    }
+
+    .mesajliKisim {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .ilkIkisi {
+        display: none;
+        flex-direction: row;
+        width: 90%;
+    }
+
+
+    #asagiInmeButonuParent {
+        position: absolute;
+        transform: translateX(110%);
+        top: .4vh;
+        border-radius: 50%;
+        border: none;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    #asagiInmeButonu {
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+    }
+
+    #notificationCount {
+        font-size: .8rem;
+        top: 0;
+    }
+
+
+    #chatScreen {
+        display: none;
+    }
+
+    #homeScreenItems {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    #homeScreenItems ul li {
+        background-color: rgb(226, 226, 197);
+        height: 6vh;
+        cursor: pointer;
+        padding: 4px;
+        width: 90vw;
+
+        border-top: 1px solid green;
+        border-bottom: 1px solid green;
+
+        /* border-radius: 8px; */
+        font-size: 22px;
+        margin: 16px 0px;
+    }
+
+    .usernameDivs {
+        color: red;
+
+    }
+
+    .messageSiluetParent {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .yukleniyor {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    .messageSiluet {
+        color: rgb(83, 83, 83);
+        font-size: .8em;
+
+        max-width: 62vw;
+        /* Maksimum genişlik */
+        overflow: hidden;
+        /* İçerik sığmazsa kes */
+        white-space: nowrap;
+        /* Metni satır sonunda kes */
+        text-overflow: ellipsis;
+        /* Metni kesildiğinde üç nokta (...) göster */
+    }
+
+    .clockInformation {
+        color: rgb(63, 62, 62);
+        font-size: .8em;
+    }
+
+    #geriTusuParent {
+        display: none;
+        padding: 8px;
+    }
+
+    #geriTusu {
+        border-radius: 8px;
+        padding: 6px;
+        background-color: green;
+        color: white;
+    }
+}

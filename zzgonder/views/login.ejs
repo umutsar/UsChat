@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/loginComputer.css">
+    <link rel="stylesheet" href="/css/loginPhone.css">
+</head>
+
+<body>
+
+
+    <div class="wrapper">
+        <div class="title-text">
+            <div class="title login">Üye Formu</div>
+            <div class="title signup">Kayıt Formu</div>
+        </div>
+
+        <div class="form-container">
+
+            <div class="slide-controls">
+                <input type="radio" name="slide" id="login" checked>
+                <input type="radio" name="slide" id="signup">
+                <label for="login" class="slide login">Üye Girişi</label>
+                <label for="signup" class="slide signup">Üye Ol</label>
+                <div class="slider-tab"></div>
+            </div>
+
+            <div class="form-inner">
+
+                <form action="/login" class="login" method="post">
+                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+
+                    <div class="bosluk"> </div>
+                    <div class="field">
+                        <input type="text" name="username" placeholder="Kullanıcı adı veya mail" required>
+                    </div>
+
+                    <div class="bosluk"> </div>
+                    <div class="field">
+                        <input type="password" name="password" placeholder="Şifre" required>
+                    </div>
+
+                    <div class="pass-link"><a href="#">Şifremi unuttum</a></div>
+
+
+                    <div class="bosluk"> </div>
+                    <div id="girisButonu" class="field btn">
+                        <div class="btn-layer"></div>
+                        <input type="submit" value="Giriş">
+                    </div>
+                    <div class="signup-link">Üye Değilim. <a href="">Üye Ol</a></div>
+
+                    <% if (notActive==1) { %>
+                        <div class="alertParent">
+                            <div class="notActiveAlert">Hesabınız belirli nedenlerden dolayı kapalıdır.
+                                <a href="mailto:contact@umutsar.com">iletişime geçin</a>.
+                            </div>
+                        </div>
+                        <% } else if(notActive==2) {%>
+                            <div class="alertParent">
+                                <div class="loginErrorAlert">Kullanıcı adı veya şifre hatalı. Lütfen tekrar deneyin!
+                                </div>
+                            </div>
+
+                            <% }%>
+
+                </form>
+
+
+                <form action="/signup" class="signup" id="signupForm" method="post">
+                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+
+
+                    <div class="bosluk"> * </div>
+                    <div class="field">
+                        <input type="text" name="signupName" placeholder="İsminiz" required>
+                    </div>
+
+                    <div class="bosluk"> * </div>
+                    <div class="field">
+                        <input type="email" name="signupMail" placeholder="Mail Adresiniz" required>
+                    </div>
+
+                    <div class="bosluk"> </div>
+                    <div class="field">
+                        <input type="tel" name="signupTel" placeholder="Telefon Numaranız">
+                    </div>
+
+                    <div class="bosluk"> * </div>
+                    <div class="field">
+                        <input type="text" name="signupUsername" placeholder="Kullanıcı Adınız" required>
+                    </div>
+
+                    <div class="bosluk"> * </div>
+                    <div class="field">
+                        <input type="password" name="signupPassword" placeholder="Şifreniz" required>
+                    </div>
+
+                    <div class="bosluk"> * </div>
+                    <div class="field">
+                        <input type="password" name="signupPasswordConfirm" placeholder="Şifreniz (Tekrar)" required>
+                    </div>
+
+
+                    <div class="bosluk"> </div>
+                    <div class="field btn">
+                        <div class="btn-layer"></div>
+                        <input type="submit" value="Kaydol">
+                    </div>
+
+                    <% if (notActive==1) { %>
+                        <div class="alertParent">
+                            <div class="notActiveAlert">Hesabınız belirli nedenlerden dolayı kapalıdır.
+                                <a href="mailto:contact@umutsar.com">iletişime geçin</a>.
+                            </div>
+                        </div>
+                        <% } else if(notActive==2) {%>
+                            <div class="alertParent">
+                                <div class="loginErrorAlert">Kullanıcı adı veya şifre hatalı. Lütfen tekrar deneyin!
+                                </div>
+                            </div>
+
+                            <% } %>
+
+                </form>
+
+
+
+            </div>
+        </div>
+
+    </div>
+    <script src="/js/login.js"></script>
+    
+</body>
+
+</html>

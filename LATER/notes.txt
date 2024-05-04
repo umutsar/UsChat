@@ -1,0 +1,16 @@
+
+Please input the size of the side of the squeare
+6
+
+the area of the square is 36
+The perimeter of the square is 24
+The ares of box1 is 81
+The perimeter of box1 is 36
+
+
+
+
+
+
+
+

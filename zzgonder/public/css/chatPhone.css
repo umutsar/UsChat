@@ -1,0 +1,338 @@
+.fixedMessage {
+    overflow-wrap: break-word;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+    html {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        height: 90vh;
+        font-family: Arial, sans-serif;
+        background-color: beige;
+    }
+
+    h2 {
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
+    }
+
+    #kapsayici {
+        margin: 0;
+        padding: 0;
+    }
+
+    #messages {
+        margin: auto;
+        border-radius: 8px;
+        border: 2px solid #ccc;
+        padding: 10px;
+        width: 90vw;
+        max-height: 74vh;
+        overflow: auto;
+    }
+
+    #pseudoDiv {
+        padding: 18px 12px;
+        margin-bottom: 2px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="submit"] {
+        margin-bottom: 10px;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    #messageHeader {
+        display: flex;
+        text-align: center;
+        width: 100vw;
+        background-color: beige;
+        display: inline-block;
+        margin: 1vh 0;
+    }
+
+    .dateDiv {
+        text-align: center;
+        margin: 8px 0;
+        color: #0D9276;
+    }
+
+    .message {
+        display: flex;
+        position: relative;
+        /* saat bilgisi için koydum */
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+
+        padding: 6px;
+        border-radius: 8px;
+        border: 1px solid grey;
+        margin-bottom: 2px;
+    }
+
+    .altAlta {
+        flex-direction: column;
+    }
+
+    .userOfMessage {
+        display: inline-block;
+        width: 100%;
+        vertical-align: middle;
+        color: red;
+    }
+
+    .onlyMessage {
+        display: flex;
+        justify-content: space-between;
+        width: 86vw;
+    }
+
+
+    .onlyMessage span {
+        display: flex;
+        padding: .4%;
+    }
+
+    .mesajinSagTarafi {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .timeInformation {
+        font-size: 10px;
+        right: 36px;
+    }
+
+    .silButonlariResmi {
+        min-width: 22px;
+        min-height: 22px;
+        width: 22px;
+        height: 22px;
+        border: none;
+        background-image: url("../images/delete.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .deneme {
+        width: 16px;
+        height: 16px;
+        border: none;
+        background-image: url("../images/delete.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    #inputs {
+        display: flex;
+        margin-left: auto;
+        width: 90vw;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 2vh;
+    }
+
+
+    #messageInput {
+        padding: 12px;
+        padding-left: 36px;
+        flex: 12;
+        margin: 0;
+        margin-right: 10px;
+        position: relative;
+        border-radius: 4px;
+        border: 1px solid rgb(82, 82, 82);
+    }
+
+
+
+
+
+
+    #plusIconParent {
+        height: 39px;
+        width: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        color: grey;
+        position: absolute;
+        border: 1px solid rgb(82, 82, 82);
+        border-right: 1px solid rgb(82, 82, 82);
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+    }
+
+
+    #dropdownMenu {
+        position: absolute;
+        top: 110%;
+        left: 2vw;
+        display: none;
+        width: 32vw;
+        list-style: none;
+        transform: translate(-10%, -154%);
+        padding: 0;
+        margin: 0;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        border: 1px solid black;
+        border-radius: 6px;
+        padding: .4vh .6vw;
+    }
+
+    #dropdownMenu li {
+        color: black;
+        padding: .2vh .4vw;
+        margin: 5px 0;
+        border-radius: 6px;
+    }
+
+    #dropdownMenu li:hover {
+        background-color: rgb(0, 157, 255);
+    }
+
+
+    #fileInputLabel {
+        cursor: pointer;
+    }
+
+    .rotated {
+        animation: rotateAnimation .5s forwards;
+    }
+
+    .rotatedReverse {
+        animation: rotateAnimationReverse .35s forwards;
+    }
+
+
+
+
+
+    #mesajGonderButonu {
+        flex: 1;
+        background-color: #4caf50;
+        color: white;
+        padding: 0px 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    #mesajGonderButonu:hover {
+        background-color: #45a049;
+    }
+
+
+    #yok {
+        float: right;
+        margin: 0;
+        padding: 0;
+        height: 4vh;
+    }
+
+    #cikisYapButonu {
+        height: 4vh;
+        margin: .6vh;
+        border-radius: 8px;
+        padding: 8px;
+        background-color: rgb(255, 109, 109);
+    }
+
+
+
+
+    .labels {
+        display: inline-block;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    #imagePreviewParent {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 43px;
+    }
+
+    #imagePreview {
+        position: relative;
+        border: 1px solid black;
+        border-radius: 6px;
+    }
+
+    #removeButton {
+        position: absolute;
+        right: 6px;
+        top: 6px;
+    }
+
+
+
+    .imageURLs {
+        width: 300px;
+        margin: auto;
+        height: auto;
+        text-align: center;
+        border-radius: 6px;
+    }
+
+    .imageURLsOnly {
+        width: 86vw;
+        height: auto;
+        border-radius: 6px;
+        margin: auto;
+    }
+
+    .mesajliKisim {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .ilkIkisi {
+        display: none;
+        flex-direction: row;
+        width: 90%;
+    }
+
+
+    #asagiInmeButonuParent {
+        position: absolute;
+        transform: translateX(110%);
+        top: .4vh;
+        border-radius: 50%;
+        border: none;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    #asagiInmeButonu {
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+    }
+
+    #notificationCount {
+        font-size: .8rem;
+        top: 0;
+    }
+}

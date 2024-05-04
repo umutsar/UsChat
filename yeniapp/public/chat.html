@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat Page</title>
+</head>
+<body>
+  <h2>Chat Page</h2>
+  <div id="messages">
+    <!-- Chat messages will be displayed here -->
+  </div>
+  <textarea id="messageInput" placeholder="Type your message..."></textarea>
+  <button id="sendMessageButton">Send</button>
+
+  <!-- Include Socket.IO -->
+  <script src="/socket.io/socket.io.js"></script>
+  <!-- Include your custom chat script -->
+  <script src="/js/chat.js"></script>
+</body>
+</html>

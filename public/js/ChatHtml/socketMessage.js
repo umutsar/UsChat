@@ -57,7 +57,7 @@ socket.on("message", (data) => {
                                <span class="timeInformation">${data["time"].split(":")[0] + ":" + data["time"].split(":")[1]}</span>
                             </span>
                       </div>
-                </div>
+                </div> 
              `;
          }
       }

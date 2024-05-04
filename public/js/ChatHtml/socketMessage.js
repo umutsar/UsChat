@@ -61,7 +61,7 @@ socket.on("message", (data) => {
              `;
          }
       }
-      // comment
+      // commentt
 
 
       // Sadece fotoğraf varsa
